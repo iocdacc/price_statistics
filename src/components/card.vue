@@ -1,12 +1,14 @@
 <template>
   <div>
-    <Card
-      v-for="(v, index) in phone" 
-      :key="index+'phone'"
-    >
-      <p slot="title">{{v.pic}}</p>
-      <div><img :src="v.img" alt=""></div>
-    </Card>
+      <Card
+        v-for="(v, index) in phone" 
+        :key="index+'phone'"
+      >
+        <p slot="title">{{v.pic}}</p>
+        <div>
+          <a :href="v.link" :title="v.title" target="_blank"><img :src="v.img" alt=""></a>
+        </div>
+      </Card>
   </div>
 </template>
 
@@ -25,12 +27,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
+.Tooltip{
+  position: absolute;
+  width: 21px;
+}
 /deep/ .ivu-card{
   width: 40px;
   height: 50px;
   overflow: hidden;
   float: left;
-  margin: 1px;
+  margin: 6px 1px;
 }
 /deep/ .ivu-card-head{
   padding: 0;
@@ -51,6 +57,7 @@ export default {
   padding: 0;
   img{
     display: block;
+    padding: 2px;
   }
 }
 </style>
