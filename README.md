@@ -1,4 +1,4 @@
-# vue-phone_chart
+# price_statistics
 
 ## Project setup
 ```
