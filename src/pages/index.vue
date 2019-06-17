@@ -36,7 +36,7 @@ export default {
         }
       })
     }).then(() => {
-      axios.get('/api/mock/phone').then((response) => {
+      axios.get('/api/price_statistics/master/public/mock/phone').then((response) => {
         let lineNum
         response.data.forEach(v => {
           lineNum = (this.data.length - Math.floor(+v.pic / 500)) - 1
