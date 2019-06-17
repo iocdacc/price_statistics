@@ -1,18 +1,13 @@
 <template>
-  <div>
-    <div class="title">
-      <h1>手机价格分布图</h1>
-    </div>
-    <div class="box-main">
-      <Table 
-        stripe
-        border
-        height="800"
-        :columns="columns" 
-        :data="data"
-      ></Table>
-      <Spin size="large" fix v-if="spinShow"></Spin>
-    </div>
+  <div class="box-main">
+    <Table 
+      stripe
+      border
+      height="800"
+      :columns="columns" 
+      :data="data"
+    ></Table>
+    <Spin size="large" fix v-if="spinShow"></Spin>
   </div>
 </template>
 <script>
@@ -74,17 +69,10 @@ export default {
   position: relative;
   height: 800px;
   width: 1625px;
-  margin: 0 auto 50px auto;
+  margin: 0 auto;
   background: #fff;
   -webkit-box-shadow: 0px 0px 5px rgba(26,26,26,.1);
   box-shadow: 0px 0px 5px rgba(26,26,26,.1);
   border-radius: 5px;
-}
-.title {
-  width: 1625px;
-  margin: 0 auto;
-  line-height: 50px;
-  height: 50px;
-  text-align: center;
 }
 </style>
