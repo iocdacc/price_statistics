@@ -58,6 +58,8 @@ export default {
   img{
     display: block;
     padding: 2px;
+    width: 100%;
+    height: 100%;
   }
 }
 </style>

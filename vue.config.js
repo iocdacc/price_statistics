@@ -1,22 +1,12 @@
 var proxy = require('http-proxy-middleware');
 
 module.exports = {
+  publicPath:"",
   configureWebpack: {
     devtool: false,
     output: {
       filename: 'js/[name].[hash:8].js',
-      publicPath: '/',
       chunkFilename: 'js/[name].[hash:8].js'
-    },
-    devServer: {
-      proxy: {
-        '/api': {
-          target: 'https://raw.githubusercontent.com/iocdacc/',
-          pathRewrite: {'^/api' : ''},
-          changeOrigin: true,     // target是域名的话，需要这个参数，
-          secure: false,          // 设置支持https协议的代理
-        },
-      }
     },
     optimization:{
       splitChunks: {

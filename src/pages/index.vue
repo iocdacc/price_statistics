@@ -21,7 +21,7 @@ export default {
   methods: {
   },
   mounted:function (){
-    axios.get('/config/phone-config.json').then((response) => {
+    axios.get('config/phone-config.json').then((response) => {
       this.columns = response.data.columns
       this.data = response.data.lineTitle
       this.spinShow = false
@@ -36,7 +36,7 @@ export default {
         }
       })
     }).then(() => {
-      axios.get('/api/price_statistics/master/public/mock/phone').then((response) => {
+      axios.get(global.API_HOST+'/phone').then((response) => {
         let lineNum
         response.data.forEach(v => {
           lineNum = (this.data.length - Math.floor(+v.pic / 500)) - 1
