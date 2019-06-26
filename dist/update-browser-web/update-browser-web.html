@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--[if lt IE 10]><html class="ie" id="ie"><![endif]-->
+<!--[if !IE]><!--><html><!--<![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>浏览器版本过低</title>
+  <script>
+  if (!document.getElementById("ie")) {
+    window.location.href = "/"
+  }
+  </script>
+  <style>
+    ol,ul{margin:0;padding:0}
+    ul{font-size: 0px;}
+    li{list-style:none;float: left;width: 150px;border: 1px #cfcfcf solid;margin-right: 5px;}
+    img{width: 100%;border:0 none;}
+  </style>
+</head>
+<body>
+  <p>请升级浏览器</p>
+  <p>由于您使用的浏览器版本过低，建议您升级浏览器或下载使用其它浏览器。</p>
+  <div>
+    <ul>
+      <li><a href="https://www.google.cn/intl/zh-CN/chrome/"><img src="./img/chrome.png" alt=""></a></li>
+      <li><a href="https://support.microsoft.com/zh-cn/help/17621/internet-explorer-downloads"><img src="./img/ie11.png" alt=""></a></li>
+      <li><a href="https://www.mozilla.org/zh-CN/firefox/new/"><img src="./img/firefox.png" alt=""></a></li>
+    </ul>
+  </div>
+</body>
+</html>
